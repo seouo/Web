@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html lang ="ko">
-    <head>
-            <title> 조경 회사 </title>
-    </head>
-    <body>
-        <p> 연습용 </p>
-    </body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디그네쳐ㅣdesign nature</title>
+    <link rel="stylesheet" href="index-style.css">
 
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fjalla+One&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 네비게이션 영역 -->
+    <nav>
+        <a href="index.html">홈</a>
+        <a href="company.html">회사소개</a>
+        <a href="service.html">서비스</a>
+        <a href="contact.html">문의</a>
+    </nav>
+  
+    <!-- 헤더 영역 -->
+    <header>
+        <div id="main" class="main-section">
+            <h1>D I G N A T U R E</h1>
+            <h4> 디그네쳐</h4>
+            <div class="slideshow-container">
+                <div class="slides"> <img src="img/one.jpg" alt="디그네쳐 조경 홈페이지 사진1"></div>
+                <div class="slides"> <img src="img/image2.jpg" alt="디그네쳐 조경 홈페이지 사진2"></div>
+                <div class="slides"> <img src="img/image3.jpg" alt="디그네쳐 조경 홈페이지 사진3"></div>
+                <div class="slides"> <img src="img/image4.jpg" alt="디그네쳐 조경 홈페이지 사진4"></div>
+            </div>
+        </div>
+    </header>
+
+    <div id="home" class="home-section">
+        
+
+
+    </div>
+
+    <!-- 풋터 영역 -->
+    <footer>
+        <p> 상호 디그네쳐 CEO 김 서 우 사업자등록번호 2023110990</p>
+        <p> TEL 02-123-4567 FAX 02-123-4567</p>
+        <p>이메일 seowoo@swu.ac.kr </p>
+        <p>&copy; 2024.06.18 디그네쳐ㅣdisgn nature </p>
+    </footer>
+
+    <!-- 자바 -->
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 슬라이드쇼 기능
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // 2초마다 슬라이드 변경
+        }
+    </script>
+</body>
 </html>
