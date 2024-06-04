@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF; /* 화이트 */
+    color: #000000; /* 블랙 */
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+nav {
+    float: left;
+    background-color: #000000; /* 블랙 */
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+nav a {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #5D6851; /* 딥그린 */
+}
+
+.main-section, .section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.main-section {
+    background-color: #000000; /* 블랙 */
+    color: #FFFFFF; /* 화이트 */
+    text-align: center;
+}
+.main-section h1 {
+    position: absolute;
+    font-size: 72px; /* 'D I G N A T U R E' 글씨 크기 조정 */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main-section h4 {
+    position: absolute;
+    text-align: center;
+    margin-top: 120px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    letter-spacing: 20px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.home-section {
+    position: absolute;
+    bottom: 10px; /* 하단 여백 */
+    right: 10px; /* 우측 여백 */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    padding: 5px; /* 여백 */
+    font-size: 18px; /* 폰트 크기 */
+}
+.place img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.section {
+    width: 80%;
+    margin: auto;
+    background-color: #FFFFFF;
+    color: #000000; /* 블랙 */
+}
+.form-group {
+    margin: 10px 0;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group select, .form-group input[type="text"], .form-group input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    opacity: 0.5;
+}
+.slides {
+    display: none;
+}
+.slides img {
+    width: 100%;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.gallery img {
+    width: calc(33.333% - 10px); /* 화면 크기에 맞춰 사진 크기 조정 */
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #000000; /* 블랙 */
+    color: #FFFFFF; /* 화이트 */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
+}
+
+button {
+    background-color: #5D6851; /* 딥그린 */
+    color: #FFFFFF; /* 화이트 */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #5D6851;
+}
