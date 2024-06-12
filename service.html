@@ -12,26 +12,63 @@
     </head>
 
     <body>
-        <section id="design" class="section">
-            <h2>설계</h2>
-            <h3>조경 설계과정</h3>
-            <p>1. 상담 2. 현장 조사 3. 설계안 작성 4. 시공 5. 사후 관리</p>
-            <h3>수목 관리</h3>
-            <p>정기적인 수목 관리 서비스 제공</p>
-        </section>
-        
-        <section id="sale" class="section">
-            <h2>판매</h2>
-            <h3>화훼류 판매</h3>
-            <div class="gallery">
-                <img src="img/flower1.jpg" alt="flower1">
-                <img src="img/flower2.jpg" alt="flower2">
-                <img src="img/flower3.jpg" alt="flower3">
-                <img src="img/flower5.jpg" alt="flower4">
-                <img src="img/flower4.jpg" alt="flower5">
-                <img src="img/plant1.jpg" alt="plant1">
-            </div>
-        </section>
 
+        <!-- 네비게이션 영역 -->
+    <nav>
+        <a href="index.html"> 홈 </a>
+        <a href="company.html"> 회사소개 </a>
+        <a href="service.html"> 서비스 </a>
+        <a href="sell.html"> 판매 </a>
+        <a href="contact.html"> 문의 </a>
+    </nav>
+
+    <div class="service-contain">
+        <div class="first">
+            <h2>조경 설계</h2>
+        </div>
+        <div class="process-container">
+            <div class="process-step">1. 상담</div>
+            <div class="process-step">2. 현장 조사</div>
+            <div class="process-step">3. 설계안 작성</div>
+            <div class="process-step">4. 시공</div>
+            <div class="process-step">5. 사후 관리</div>
+        </div>
+        <div class="service-container">
+            <div class="service-text">
+                <h2>수목 관리</h2>
+                <p>정기적으로 수목 관리 서비스를 제공합니다. <br>저희의 전문가들이 귀하의 수목을 건강하게 유지하도록 도와드립니다.</p>
+                <h6> 수목 관리 문의는 카톡 문자 문의를 이용해주세요</h6>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="맨 위로 이동">▴</button>
+
+ <!-- 풋터 영역 -->
+ <footer>
+    <p> 상호 디그네쳐 CEO 김 서 우 사업자등록번호 2023110990</p>
+    <p> TEL 02-123-4567 FAX 02-123-4567</p>
+    <p>이메일 seowoo@swu.ac.kr </p>
+    <p>&copy; 2024.06.18 디그네쳐ㅣdesign nature </p>
+</footer>
+
+ <!-- 자바 -->
+ <script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
     </body>
 </html>

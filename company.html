@@ -9,18 +9,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fjalla+One&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    border: 1px solid #5D6851; /* 딥그린 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
 </head>
 
 <body>
+    <!-- 네비게이션 영역 -->
+    <nav>
+        <a href="index.html"> 홈 </a>
+        <a href="company.html"> 회사소개 </a>
+        <a href="service.html"> 서비스 </a>
+        <a href="sell.html"> 판매 </a>
+        <a href="contact.html"> 문의 </a>
+    </nav>
+
+    <!-- 회사내용 영역 -->
     <section id="about" class="section">
-        <h2>설립배경</h2>
-        <h4> 디그네쳐는 '누구나, 아무나'가 아닌 '당신'을 위해 만들어졌습니다.</h4>
+        <div class="companyintro">
+            <h2>설립배경</h2>
+            <h4>디그네쳐는 '누구나, 아무나'가 아닌 '당신'을 위해 만들어졌습니다.</h4>
+            <p>디그네쳐는 고객의 개별적인 요구와 독특한 자연환경을 고려하여 최고의 맞춤형 조경 서비스를 제공합니다. 
+            <br>우리의 목표는 단순히 아름다운 공간을 만드는 것이 아니라, 
+            <br>지속 가능하고 자연 친화적인 환경을 조성하여 고객과 자연 모두에게 혜택을 주는 것입니다.</p>
+        </div>
         <h3>목표</h3>
-        <p>디그네쳐는 고객의 만족과 자연 환경 보전을 최우선으로 생각합니다.</p>
+        <p>디그네쳐는 고객의 만족과 자연 환경 보전을 최우선으로 생각합니다. 
+        <br>우리는 고객의 요구를 깊이 이해하고, 그들의 비전을 현실로 만들기 위해 최선을 다합니다. 
+        <br>또한, 우리의 모든 프로젝트는 지속 가능한 방법으로 수행되며, 
+        <br>환경에 미치는 영향을 최소화하는 것을 목표로 합니다.</p>
         <h3>채용</h3>
+        <p> 우리와 같은 가치관과 목표를 갖고 있는 인재를 채용하고 있습니다. 많은 관심 바랍니다.</p>
         <form>
             <div class="form-group">
                 <label for="name">이름</label>
@@ -123,5 +139,33 @@
             <button type="submit">전송하기</button>
         </form>
     </section>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="맨 위로 이동">▴</button>
+
+     <!-- 풋터 영역 -->
+     <footer>
+        <p> 상호 디그네쳐 CEO 김 서 우 사업자등록번호 2023110990</p>
+        <p> TEL 02-123-4567 FAX 02-123-4567</p>
+        <p>이메일 seowoo@swu.ac.kr </p>
+        <p>&copy; 2024.06.18 디그네쳐ㅣdeesign nature </p>
+    </footer>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

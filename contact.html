@@ -3,20 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>디그네쳐ㅣ회사소개</title>
+    <title>디그네쳐ㅣ견적의뢰</title>
     <link rel="stylesheet" href="index-style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fjalla+One&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <section id="inquiry" class="section">
-        <h2>견적 의뢰</h2>
-        <h3>전화문의</h3>
-        <p>02-1234-5678</p>
-        <h3>카톡 문자 문의</h3>
-        <p>카카오톡 ID: DIGNATURE</p>
-    </section>
+
+    <!-- 네비게이션 영역 -->
+    <nav>
+        <a href="index.html"> 홈 </a>
+        <a href="company.html"> 회사소개 </a>
+        <a href="service.html"> 서비스 </a>
+        <a href="sell.html"> 판매 </a>
+        <a href="contact.html"> 문의 </a>
+    </nav>
+
+        <div class="title">
+            <h1>견적 의뢰</h1>
+            <p>여기에서 견적을 요청하실 수 있습니다.</p>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <h3>전화 문의</h3>
+                <p>02-123-4567</p>
+            </div>
+            <div class="box">
+                <h3>카톡 문자 문의</h3>
+                <p><a href="https://open.kakao.com/o/sPbBGUwg">카카오톡으로 문의하기</a></p>
+            </div>
+            <div class="box">
+                <h3>인스타 문의</h3>
+                <p><a href="https://www.instagram.com/dignature_?igsh=MTM2N3Nxa3g0eHQ0Yw%3D%3D&utm_source=qr">인스타그램으로 문의하기</a></p>
+            </div>
+        </div>
+
+        <button onclick="scrollToTop()" id="scrollToTopBtn" title="맨 위로 이동">▴</button>
+
+     <!-- 풋터 영역 -->
+     <footer>
+        <p> 상호 디그네쳐 CEO 김 서 우 사업자등록번호 2023110990</p>
+        <p> TEL 02-123-4567 FAX 02-123-4567</p>
+        <p>이메일 seowoo@swu.ac.kr </p>
+        <p>&copy; 2024.06.18 디그네쳐ㅣdesign nature </p>
+    </footer>
+
+    <!-- 자바 -->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

@@ -16,16 +16,17 @@
 
     <!-- 네비게이션 영역 -->
     <nav>
-        <a href="index.html">홈</a>
-        <a href="company.html">회사소개</a>
-        <a href="service.html">서비스</a>
-        <a href="contact.html">문의</a>
+        <a href="index.html"> 홈 </a>
+        <a href="company.html"> 회사소개 </a>
+        <a href="service.html"> 서비스 </a>
+        <a href="sell.html"> 판매 </a>
+        <a href="contact.html"> 문의 </a>
     </nav>
   
     <!-- 헤더 영역 -->
     <header>
         <div id="main" class="main-section">
-            <h1>D I G N A T U R E</h1>
+            <h1>D I G N A T U R E </h1>
             <h4> 디그네쳐</h4>
             <div class="slideshow-container">
                 <div class="slides"> <img src="img/one.jpg" alt="디그네쳐 조경 홈페이지 사진1"></div>
@@ -36,31 +37,58 @@
         </div>
     </header>
 
-    <div id="home" class="home-section">
-        
+    <!-- 소개 영역 -->
+    <div class="parent-container">
+        <div class="introduction-section">
+          <h1>디그네쳐 소개</h1>
+          <p>
+            디그네쳐는 사람과 자연 모두 존중하고 함께 공존하길 원합니다. 
+            <br>또한,그것을 재현하기 위해 노력하는 조경 디자인 업체입니다.
+          </p>
+        </div>
+        <div class="image-container">
+          <img src="./img/place.jpg" alt="Example Image" />
+        </div>
+      </div>
 
-
+    <!-- 오시는길 영역 -->
+     <div class="map-section">
+            <h2> 오시는 길</h2>
+        </div>
+        <div class="map-container">
+            <div class="map">
+            <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d470.4835402458157!2d127.03989582413887!3d37.50736673268047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1717507244631!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
     </div>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="맨 위로 이동">▴</button>
+
 
     <!-- 풋터 영역 -->
     <footer>
         <p> 상호 디그네쳐 CEO 김 서 우 사업자등록번호 2023110990</p>
         <p> TEL 02-123-4567 FAX 02-123-4567</p>
         <p>이메일 seowoo@swu.ac.kr </p>
-        <p>&copy; 2024.06.18 디그네쳐ㅣdisgn nature </p>
+        <p>&copy; 2024.06.18 디그네쳐ㅣdesign nature </p>
     </footer>
 
     <!-- 자바 -->
     <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+      window.onscroll = function() {scrollFunction()};
 
+      function scrollFunction() {
+          const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              scrollToTopBtn.style.display = "block";
+          } else {
+              scrollToTopBtn.style.display = "none";
+          }
+      }
+
+      function scrollToTop() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
         // 슬라이드쇼 기능
         let slideIndex = 0;
         showSlides();

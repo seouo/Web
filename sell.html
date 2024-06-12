@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디그네쳐ㅣ판매</title>
+    <link rel="stylesheet" href="index-style.css">
+
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fjalla+One&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <!-- 네비게이션 영역 -->
+    <nav>
+        <a href="index.html">홈</a>
+        <a href="company.html">회사소개</a>
+        <a href="service.html">서비스</a>
+        <a href="sell.html">판매</a>
+        <a href="contact.html">문의</a>
+    </nav>
+
+    <section id="sale" class="section">
+        <h2>판매</h2>
+        <p>디그네쳐는 당신의 마음에 맞는 꽃을 찾을 수 있도록 노력할 것입니다.</p>
+        <h3>화훼류 판매</h3>
+        <div class="gallery">
+            <div class="image-container">
+                <img src="img/flower1.jpg" alt="flower1">
+                <span class="image-number">1</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower2.jpg" alt="flower2">
+                <span class="image-number">2</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower3.jpg" alt="flower3">
+                <span class="image-number">3</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower4.jpg" alt="flower4">
+                <span class="image-number">4</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower5.jpg" alt="flower5">
+                <span class="image-number">5</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower6.jpg" alt="flower6">
+                <span class="image-number">6</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower7.jpg" alt="flower7">
+                <span class="image-number">7</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower8.jpg" alt="flower8">
+                <span class="image-number">8</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower9.jpg" alt="flower9">
+                <span class="image-number">9</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower10.jpg" alt="flower10">
+                <span class="image-number">10</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower11.jpg" alt="flower11">
+                <span class="image-number">11</span>
+            </div>
+            <div class="image-container">
+                <img src="img/flower12.jpg" alt="flower12">
+                <span class="image-number">12</span>
+            </div>
+        </div>
+
+        <!-- 선택란 및 주소 입력 -->
+        <div class="select-box">
+            <label for="select-option">꽃 선택:</label>
+            <select id="select-option">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="etc">기타</option>
+            </select>
+            <input type="text" id="etc-option" placeholder="기타 입력">
+        </div>
+        <div class="address">
+            <label for="address">주소:</label>
+            <input type="text" id="address" placeholder="주소를 입력하세요">
+        </div>
+        <button id="submit-btn">전송</button>
+    </section>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="맨 위로 이동">▴</button>
+
+    <!-- 풋터 영역 -->
+    <footer>
+        <p>상호 디그네쳐 CEO 김서우 사업자등록번호 2023110990</p>
+        <p>TEL 02-123-4567 FAX 02-123-4567</p>
+        <p>이메일 seowoo@swu.ac.kr</p>
+        <p>&copy; 2024.06.18 디그네쳐ㅣdesign nature</p>
+    </footer>
+
+    <!-- 자바스크립트 -->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTopBtn").style.display = "block"; 
+            } else {
+                document.getElementById("scrollToTopBtn").style.display = "none"; 
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        }
+
+        document.getElementById('submit-btn').addEventListener('click', () => {
+            const selectedOption = document.getElementById('select-option').value;
+            const etcOption = document.getElementById('etc-option').value;
+            const address = document.getElementById('address').value;
+            alert(`꽃 선택: ${selectedOption === 'etc' ? etcOption : selectedOption}\n주소: ${address}`);
+            alert('전송했습니다.');
+        });
+    </script>
+</body>
+</html>
